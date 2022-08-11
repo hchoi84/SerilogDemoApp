@@ -1,0 +1,59 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+  //[Inject] private ILogger<Index> _logger { get; set; } = default!;
+  [Inject] private ILoggerFactory _factory { get; set; } = default!;
+  private ILogger _logger;
+
+  protected override void OnInitialized()
+  {
+    _logger = _factory.CreateLogger("Index");
+  }
+
+  protected override void OnAfterRender(bool firstRender)
+  {
+    if (firstRender)
+      Logging2();
+  }
+
+  private void Logging1() =>
+    _logger.LogInformation(1001, "You requested the Index page at {datetime} UTC", DateTime.UtcNow);
+
+  private void Logging2()
+  {
+    _logger.LogTrace("This is trace");
+    _logger.LogDebug("This is debug");
+    _logger.LogInformation("This is info");
+    _logger.LogWarning("This is warning");
+    _logger.LogError("This is error");
+    _logger.LogCritical("This is critical");
+  }
+
+  private void Loggin3()
+  {
+    try
+    {
+      throw new Exception("You forgot to catch me");
+    }
+    catch (Exception ex)
+    {
+      _logger.LogCritical(ex, "Exception thrown at {time} UTC", DateTime.UtcNow);
+    }
+  }
+
+  //Different levels of logging
+  // Trace (trce) - will usually have really detailed info w/ app secrets
+  // Debug (dbug) - debugging stuff
+  // Info (info) - flow of how app is being used. app steps
+  // Warning (warn) - catching issue
+  // Error (fail) - something that crashes app at certain point. Example, CRUD
+  // Critical (crit) - related to losing data, server issue, etc.
+}
