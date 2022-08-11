@@ -1,0 +1,20 @@
+08/11/2022 11:49:28 App starting up at 08/11/2022 18:49:28 UTC
+08/11/2022 11:49:30 HTTP "GET" "/" responded 200 in 166.3805 ms
+08/11/2022 11:49:30 HTTP "GET" "/_blazor/initializers" responded 200 in 2.9513 ms
+08/11/2022 11:49:30 HTTP "POST" "/_blazor/negotiate" responded 200 in 8.8186 ms
+08/11/2022 11:49:30 This is info
+08/11/2022 11:49:30 This is warning
+08/11/2022 11:49:30 This is error
+08/11/2022 11:49:30 This is critical
+08/11/2022 11:49:32 HTTP "GET" "/_blazor" responded 101 in 1977.2941 ms
+08/11/2022 11:49:32 HTTP "POST" "/_blazor/disconnect" responded 200 in 11.5541 ms
+08/11/2022 11:49:44 App starting up at 08/11/2022 18:49:44 UTC
+08/11/2022 11:49:46 HTTP "GET" "/" responded 200 in 159.9912 ms
+08/11/2022 11:49:46 HTTP "GET" "/_blazor/initializers" responded 200 in 2.8309 ms
+08/11/2022 11:49:46 HTTP "POST" "/_blazor/negotiate" responded 200 in 8.0776 ms
+08/11/2022 11:49:46 This is info
+08/11/2022 11:49:46 This is warning
+08/11/2022 11:49:46 This is error
+08/11/2022 11:49:46 This is critical
+08/11/2022 11:49:47 HTTP "GET" "/_blazor" responded 101 in 1086.2919 ms
+08/11/2022 11:49:47 HTTP "POST" "/_blazor/disconnect" responded 200 in 14.0392 ms
