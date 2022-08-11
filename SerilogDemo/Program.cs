@@ -1,3 +1,4 @@
+//https://www.youtube.com/watch?v=oXNslgIXIbQ&ab_channel=IAmTimCorey
 using SerilogDemo.Data;
 
 var builder = WebApplication.CreateBuilder(args);
