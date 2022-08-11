@@ -4,12 +4,12 @@ using Serilog;
 using SerilogDemo.Data;
 
 #region Serilog
-var configuraiton = new ConfigurationBuilder()
+var configuration = new ConfigurationBuilder()
   .AddJsonFile("appsettings.json")
   .Build();
 
 Log.Logger = new LoggerConfiguration()
-  .ReadFrom.Configuration(configuraiton)
+  .ReadFrom.Configuration(configuration)
   .CreateLogger();
 
 Log.Information("================================");
